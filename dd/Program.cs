@@ -22,3 +22,10 @@ int CountLessThan(string[] input, int n) {
 
     return count;
 }
+string[] AskArray() {
+    Console.Write("Введите значения через пробел: ");
+    return Console.ReadLine().Split(" ");
+}
+string[] array = AskArray();
+string[] result = FindLessThan(array, 3);
+Console.WriteLine($"[{string.Join(", ", array)}] -> [{string.Join(", ", result)}]");
